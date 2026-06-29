@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="container page-with-nav">
+    <section class="page-header">
+      <h1>Cardápio</h1>
+      <p class="subtitle">Unidade selecionada: <span id="unidade-atual">---</span></p>
+    </section>
+
+    <section class="categories">
+      <button class="category active" onclick="filtrarCategoria('todos', this)">Todos</button>
+      <button class="category" onclick="filtrarCategoria('cuscuz', this)">Cuscuz</button>
+      <button class="category" onclick="filtrarCategoria('tapioca', this)">Tapiocas</button>
+      <button class="category" onclick="filtrarCategoria('bebida', this)">Bebidas</button>
+      <button class="category" onclick="filtrarCategoria('bolo', this)">Sobremesas</button>
+    </section>
+
+    <section class="product-list">
+
+      <article class="product-card" data-categoria="cuscuz">
+        <img src="img/cuscuz.webp" alt="Cuscuz Tradicional" class="product-img">
+        <div class="product-info">
+          <h3>Cuscuz Tradicional</h3>
+          <p>Cuscuz de milho servido com manteiga da terra.</p>
+          <strong>R$ 20,90</strong>
+        </div>
+        <button class="add-btn" onclick="adicionarAoCarrinho('Cuscuz Tradicional', 20.90, 'img/cuscuz.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="cuscuz">
+        <img src="img/cuscuz-queijo.jfif" alt="Cuscuz com Queijo" class="product-img">
+        <div class="product-info">
+          <h3>Cuscuz com Queijo</h3>
+          <p>Cuscuz acompanhado de queijo coalho grelhado.</p>
+          <strong>R$ 24,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Cuscuz com Queijo', 24.90, 'img/cuscuz-queijo.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="cuscuz">
+        <img src="img/cuscuz-calbresa.jpg" alt="Cuscuz com Calebresa" class="product-img">
+        <div class="product-info">
+          <h3>Cuscuz com Calabresa</h3>
+          <p>Cuscuz de calabresa bem recheado.</p>
+          <strong>R$ 24,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Cuscuz com Queijo', 24.90, 'img/cuscuz-queijo.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="cuscuz">
+        <img src="img/cuscuz-frango.png" alt="Cuscuz com Frango" class="product-img">
+        <div class="product-info">
+          <h3>Cuscuz com Frango</h3>
+          <p>Cuscuz recheado com frango desfiado temperado.</p>
+          <strong>R$ 26,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Cuscuz com Frango', 26.90, 'img/cuscuz-frango.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="tapioca">
+        <img src="img/tapioca.jpg" alt="Tapioca Tradicional" class="product-img">
+        <div class="product-info">
+          <h3>Tapioca Tradicional</h3>
+          <p>Tapioca recheada com queijo coalho.</p>
+          <strong>R$ 21,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Tapioca Tradicional', 21.90, 'img/tapioca.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="tapioca">
+        <img src="img/tapioca-calabresa.jfif" alt="Tapioca Calabresa" class="product-img">
+        <div class="product-info">
+          <h3>Tapioca Calabresa</h3>
+          <p>Calabresa acebolada com queijo coalho.</p>
+          <strong>R$ 26,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Tapioca Calabresa', 26.90, 'img/tapioca-calabresa.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="tapioca">
+        <img src="img/tapioca-com-banana.jpg" alt="Tapioca com Banana" class="product-img">
+        <div class="product-info">
+          <h3>Tapioca com Banana</h3>
+          <p>Banana, canela e leite condensado.</p>
+          <strong>R$ 23,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Tapioca com Banana', 23.90, 'img/tapioca-com-banana.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="tapioca">
+        <img src="img/tapioca-de-carne-seca.webp" alt="Tapioca de Carne Seca" class="product-img">
+        <div class="product-info">
+          <h3>Tapioca de Carne Seca</h3>
+          <p>Carne seca desfiada com queijo coalho.</p>
+          <strong>R$ 28,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Tapioca de Carne Seca', 28.90, 'img/tapioca-de-carne-seca.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="bebida">
+        <img src="img/suco-caja.jpg" alt="Suco de Cajá" class="product-img">
+        <div class="product-info">
+          <h3>Suco de Cajá</h3>
+          <p>Suco natural gelado de cajá.</p>
+          <strong>R$ 8,90</strong>
+        </div>
+        <button class="add-btn" onclick="adicionarAoCarrinho('Suco de Cajá', 8.90, 'img/suco-caja.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="bebida">
+        <img src="img/suco-maracuja.jpg" alt="Suco de Maracujá" class="product-img">
+        <div class="product-info">
+          <h3>Suco de Maracujá</h3>
+          <p>Suco natural 400 ml.</p>
+          <strong>R$ 8,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Suco de Maracujá', 8.90, 'img/suco-maracuja.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="bebida">
+        <img src="img/Suco-de-Uva.jpg" alt="Suco de Uva" class="product-img">
+        <div class="product-info">
+          <h3>Suco de Uva</h3>
+          <p>Suco integral 400 ml.</p>
+          <strong>R$ 9,90</strong>
+        </div>
+        <button class="add-btn" onclick="adicionarAoCarrinho('Suco de Uva', 9.90, 'img/Suco-de-Uva.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="bebida">
+        <img src="img/suco-morango.png" alt="Suco de Morango" class="product-img">
+        <div class="product-info">
+          <h3>Suco de Morango</h3>
+          <p>Suco natural 400 ml.</p>
+          <strong>R$ 9,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Suco de Morango', 9.90, 'img/suco-morango.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="bolo">
+        <img src="img/bolo-macaxeira.jpg" alt="Bolo de Macaxeira" class="product-img">
+        <div class="product-info">
+          <h3>Bolo de Macaxeira</h3>
+          <p>Fatia de bolo tradicional com coco.</p>
+          <strong>R$ 15,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Bolo de Macaxeira', 15.90, 'img/bolo-macaxeira.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="bolo">
+        <img src="img/pudim.webp" alt="Pudim" class="product-img">
+        <div class="product-info">
+          <h3>Pudim de Leite</h3>
+          <p>Pudim de Leite Tradicional.</p>
+          <strong>R$ 15,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Bolo de Macaxeira', 15.90, 'img/bolo-macaxeira.jpg')">+</button>
+      </article>
+
+      <article class="product-card" data-categoria="bolo">
+        <img src="img/pave.jpg" alt="pave" class="product-img">
+        <div class="product-info">
+          <h3>Pave de Chocolate</h3>
+          <p>Pave de chocolate com creme.</p>
+          <strong>R$ 15,90</strong>
+        </div>
+        <button class="add-btn"
+          onclick="adicionarAoCarrinho('Bolo de Macaxeira', 15.90, 'img/bolo-macaxeira.jpg')">+</button>
+      </article>
+
+    </section>
+
+    <a href="carrinho.html" class="btn btn-primary" style="margin-top: 24px;">Ver Carrinho</a>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-link">
+      <span>🏠</span>
+      Home
+    </a>
+    <a href="promocoes.html" class="nav-link">
+      <span>🎁</span>
+      Promoções
+    </a>
+    <a href="carrinho.html" class="nav-link">
+      <span>🛒</span>
+      Carrinho
+    </a>
+    <a href="historico.html" class="nav-link">
+      <span>📋</span>
+      Histórico
+    </a>
+    <a href="perfil.html" class="nav-link">
+      <span>👤</span>
+      Perfil
+    </a>
+  </nav>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

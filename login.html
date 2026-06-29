@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Raízes do Nordeste</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+    function validarLogin() {
+        const lgpd = document.getElementById('lgpd');
+
+        if (!lgpd.checked) {
+            alert('Você precisa aceitar o uso dos dados conforme a LGPD para continuar.');
+            return;
+        }
+
+        window.location.href = 'unidades.html';
+    }
+</script>
+
+<body>
+
+    <main class="container">
+
+        <section class="login">
+
+            <h1>Bem-vindo!</h1>
+
+            <p class="subtitle">
+                Informe seus dados para continuar
+            </p>
+
+            <form>
+
+                <label>Nome completo</label>
+
+                <input id="nome" type="text" placeholder="Seu nome" required>
+
+                <label>Telefone</label>
+
+                <input id="telefone" type="tel" placeholder="(00) 00000-0000" required>
+
+                <div class="checkbox">
+
+                    <input type="checkbox" id="lgpd">
+
+                    <label for="lgpd">
+                        Li e concordo com o uso dos meus dados pessoais conforme a
+                        <strong>LGPD</strong>.
+                    </label>
+
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="salvarCliente()">
+                    Continuar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

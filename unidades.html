@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolha a Unidade | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Escolha a unidade</h1>
+      <p class="subtitle">Veja o cardápio disponível em cada loja.</p>
+    </section>
+
+    <section class="search-box">
+      <input type="text" placeholder="Buscar por cidade ou bairro">
+    </section>
+
+    <section class="unit-list">
+      <article class="unit-card active" onclick="selecionarUnidade('Recife - Boa Viagem', this)">
+        <div>
+          <h3>Recife - Boa Viagem</h3>
+          <p>Av. Conselheiro Aguiar, 1020</p>
+        </div>
+        <span>Aberta</span>
+      </article>
+
+      <article class="unit-card active" onclick="selecionarUnidade('Olinda - Centro', this)">
+        <div>
+          <h3>Olinda - Centro</h3>
+          <p>Rua do Amparo, 240</p>
+        </div>
+        <span>Aberta</span>
+      </article>
+
+      <article class="unit-card" onclick="alert('Esta unidade está fechada no momento.')">
+        <div>
+          <h3>Caruaru - Centro</h3>
+          <p>Av. Agamenon Magalhães, 550</p>
+        </div>
+        <span>Fechada</span>
+      </article>
+    </section>
+
+    <a href="cardapio.html" class="btn btn-primary">Selecionar Unidade</a>
+  </main>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

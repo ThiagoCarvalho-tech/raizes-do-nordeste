@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho | Raízes do Nordeste</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="container page-with-nav">
+        <div class="top-bar">
+            <button class="back-button" onclick="history.back()">
+                ←
+            </button>
+        </div>
+
+        <section class="page-header">
+            <h1>Meu Carrinho</h1>
+            <p class="subtitle">Confira os itens antes de finalizar.</p>
+        </section>
+
+        <section class="cart-list" id="cart-list"></section>
+
+        <article class="cart-item">
+
+            <section class="order-type">
+                <h3>Como deseja receber seu pedido?</h3>
+
+                <label>
+                    <input type="radio" name="tipo" value="retirada" checked onchange="carregarCarrinho()">
+                    Retirar na loja
+                </label>
+
+                <label>
+                    <input type="radio" name="tipo" value="entrega" onchange="carregarCarrinho()">
+                    Entrega
+                </label>
+            </section>
+
+            <section class="cart-summary">
+                <div>
+                    <span>Subtotal</span>
+                    <strong id="subtotal">R$ 0,00</strong>
+                </div>
+
+                <div>
+                    <span>Taxa de entrega</span>
+                    <strong id="frete">R$ 0,00</strong>
+                </div>
+
+                <div class="total">
+                    <span>Total</span>
+                    <strong id="total">R$ 0,00</strong>
+                </div>
+            </section>
+
+            <a href="dados-pedido.html" class="btn btn-primary">Finalizar Pedido</a>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link">
+            <span>🏠</span>
+            Home
+        </a>
+
+        <a href="promocoes.html" class="nav-link">
+            <span>🎁</span>
+            Promoções
+        </a>
+
+        <a href="carrinho.html" class="nav-link">
+            <span>🛒</span>
+            Carrinho
+        </a>
+
+        <a href="historico.html" class="nav-link">
+            <span>📋</span>
+            Histórico
+        </a>
+
+        <a href="perfil.html" class="nav-link">
+            <span>👤</span>
+            Perfil
+        </a>
+    </nav>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
