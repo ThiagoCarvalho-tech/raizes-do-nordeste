@@ -11,99 +11,103 @@
 
 <body>
 
-<main class="container">
+    <main class="container">
 
-    <a href="dados-pedido.html" class="back-button">← Voltar</a>
-
-    <section class="page-header">
-
-        <h1>Pagamento</h1>
-
-        <p class="subtitle">
-            Escolha uma forma de pagamento.
-        </p>
-
-    </section>
-
-    <section class="payment-methods">
-
-        <label class="payment-option">
-            <input type="radio" name="pagamento" checked>
-            PIX
-        </label>
-
-        <label class="payment-option">
-            <input type="radio" name="pagamento">
-            Cartão de Crédito
-        </label>
-
-        <label class="payment-option">
-            <input type="radio" name="pagamento">
-            Cartão de Débito
-        </label>
-
-        <label class="payment-option">
-            <input type="radio" name="pagamento">
-            Dinheiro
-        </label>
-
-    </section>
-
-    <section class="payment-summary">
-
-        <div>
-            <span>Subtotal</span>
-            <strong>R$ 27,80</strong>
+        <div class="top-bar">
+            <button class="back-button" onclick="history.back()">
+                ←
+            </button>
         </div>
 
-        <div>
-            <span>Taxa de entrega</span>
-            <strong>R$ 0,00</strong>
+        <section class="page-header">
+
+            <h1>Pagamento</h1>
+
+            <p class="subtitle">
+                Escolha uma forma de pagamento.
+            </p>
+
+        </section>
+
+        <section class="payment-methods">
+
+            <label class="payment-option">
+                <input type="radio" name="pagamento" checked>
+                PIX
+            </label>
+
+            <label class="payment-option">
+                <input type="radio" name="pagamento">
+                Cartão de Crédito
+            </label>
+
+            <label class="payment-option">
+                <input type="radio" name="pagamento">
+                Cartão de Débito
+            </label>
+
+            <label class="payment-option">
+                <input type="radio" name="pagamento">
+                Dinheiro
+            </label>
+
+        </section>
+
+        <section class="payment-summary">
+
+            <div>
+                <span>Subtotal</span>
+                <strong>R$ 27,80</strong>
+            </div>
+
+            <div>
+                <span>Taxa de entrega</span>
+                <strong>R$ 0,00</strong>
+            </div>
+
+            <div class="total">
+                <span>Total</span>
+                <strong>R$ 27,80</strong>
+            </div>
+
+        </section>
+
+        <div class="payment-warning">
+
+            <p>
+                🔒 O pagamento será processado por um
+                <strong>serviço externo seguro</strong>.
+            </p>
+
         </div>
 
-        <div class="total">
-            <span>Total</span>
-            <strong>R$ 27,80</strong>
-        </div>
+        <button class="btn btn-primary" onclick="simularPagamento()">
+            Confirmar Pagamento
+        </button>
 
-    </section>
+    </main>
 
-    <div class="payment-warning">
+    <script>
 
-        <p>
-            🔒 O pagamento será processado por um
-            <strong>serviço externo seguro</strong>.
-        </p>
+        function simularPagamento() {
 
-    </div>
+            const aprovado = Math.random() > 0.3;
 
-    <button class="btn btn-primary" onclick="simularPagamento()">
-        Confirmar Pagamento
-    </button>
+            if (aprovado) {
 
-</main>
+                window.location.href = "confirmado.html";
 
-<script>
+            } else {
 
-function simularPagamento(){
+                alert("Pagamento não autorizado. Tente novamente.");
 
-    const aprovado = Math.random() > 0.3;
+            }
 
-    if(aprovado){
+        }
 
-        window.location.href="confirmado.html";
+    </script>
 
-    }else{
-
-        alert("Pagamento não autorizado. Tente novamente.");
-
-    }
-
-}
-
-</script>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
